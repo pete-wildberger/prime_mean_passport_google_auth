@@ -1,14 +1,17 @@
-/**
- * Handles all routing for private routes.
- *
- * @module routes/private/index
- */
 var express = require('express');
 var router  = express.Router();
 var calendar = require('./calendar');
+var funPage = require('./funPage');
+
+
+
 
 /** ---------- SUBROUTES ---------- **/
+
+router.use('/fun', funPage);
 router.use('/calendar', calendar);
+
+
 
 /**
  * GET private/index

@@ -13,6 +13,11 @@ googleAuthApp.config(['$routeProvider', function ($routeProvider) {
       controller: 'AuthController',
       controllerAs: 'auth',
     })
+    .when('/fun', {
+      templateUrl: 'public/views/templates/funPage.html',
+      controller: 'FunController',
+      controllerAs: 'fun',
+    })
     .otherwise({
       redirectTo: 'login',
     });
